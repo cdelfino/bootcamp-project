@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "AdobeGaramond";
+    src: url("fuentes/AGaramond-Regular.otf");
+}
+
+@font-face {
+    font-family: "AdobeGaramondBold";
+    src: url("fuentes/AGaramond-Bold.otf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    font-family: "AdobeGaramond", sans-serif;
+    scroll-behavior: smooth;
+}
+
+section {
+    height: 1000px;
+    background-color: #f0f2e7;
+    padding: 55px 60px;
+    height: fit-content;
+}
+
+.caja-con-sombra {
+    border: 2px solid crimson;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+header {
+    height: fit-content;
+}
+
+.portada {
+    font-family: "AdobeGaramondBold", sans-serif;;
+    font-size: 12rem;
+    color: #e6e9db;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: url(https://i.pinimg.com/originals/35/27/88/352788282eaf8e9ea48ff0eef5b3982c.jpg);
+    min-height: 600px;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 90px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    background-color: #f0f2e7;
+    /*fijar l abarra de navegación respecto a la ventana*/
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    z-index: 99999;
+}
+
+nav.menu ul li a, nav.fill ul li a {
+  position: relative;
+  text-align: center;
+  color: rgb(14, 14, 14);    
+  font-size: 1.4rem;
+}
+
+nav.menu ul li a:after, nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+nav.menu ul li a:hover:after {
+  width: 100%;
+  list-style-type: none ;
+  padding-left: 0;
+  margin-top:0;
+  margin-bottom:0;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 9px 15px;
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+nav ul li a, nav ul li a:after, nav ul li a:before {
+    transition: all .5s;
+}
+
+nav ul li a:hover {
+    color: #555;
+  }
